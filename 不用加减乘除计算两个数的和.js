@@ -1,3 +1,10 @@
+/**
+ * @method
+ * @param {num1,num2} 整数一，整数二
+ * @returns {sum} 两个整数的和
+ * @desc 写一个函数，求两个整数之和，要求在函数体内不得使用+、-、*、/四则运算符号。
+ */
+
 function Add (num1, num2) {
   const arr1 = Array.from({ length: Math.abs(num1) });
   const arr2 = Array.from({ length: Math.abs(num2) });
