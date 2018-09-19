@@ -4,7 +4,19 @@
  * @returns {sum} 两个整数的和
  * @desc 写一个函数，求两个整数之和，要求在函数体内不得使用+、-、*、/四则运算符号。
  */
+// 正确
+function Add (num1, num2) {
+  var sum, carry;
+  do {
+    sum = num1 ^ num2;
+    carry = (num1 & num2) << 1;
+    num1 = sum;
+    num2 = carry;
+  } while (num2 !== 0);
+  return num1;
+}
 
+// 第一次想到的，很繁琐
 function Add (num1, num2) {
   const arr1 = Array.from({ length: Math.abs(num1) });
   const arr2 = Array.from({ length: Math.abs(num2) });
